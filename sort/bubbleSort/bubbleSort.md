@@ -48,3 +48,46 @@
 * 如果没发生元素交换，不改变 `isSwap` 值
 
 冒泡后判断，如果 `isSwap` 仍旧为 `false`，那么就可以提前终止冒泡了，排序已完成
+
+## （二）编码实现
+
+```js
+/**
+ * @description 冒泡排序，升序，会改变原数组
+ * @param {array} arr 数字数组
+ */
+function bubbleSort(arr) {
+  if (!Array.isArray(arr) || arr.length <= 1) return arr;
+
+  const len = arr.length;
+
+  // 对于有 len 个元素的数组，冒泡 len 次一定可以完成排序
+  for (let i = 0; i < len; i++) {
+    let isSwap = false; // 冒泡过程中是否发生数据交换
+    let j = 0;
+
+    // 为什么循环终止条件是 j < len - i - 1?
+    // - i: 每次冒泡至少会筛出一个最大的元素到数组右侧，这些筛出的元素不用再比较了，它们一定不比本轮冒泡的元素小
+    // - 1: 冒泡过程中每次比较的是索引为 j 和 j + 1 的元素
+    while (j < len - i - 1) {
+      const lNum = arr[j];
+      const rNum = arr[j+1];
+
+      // 若前一个元素 > 后一个元素，交换位置
+      if (lNum > rNum) {
+        // 这里假设数组元素都是数字，因为是基本数据类型，所以就直接变量赋值了
+        arr[j] = rNum;
+        arr[j+1] = lNum;
+        isSwap = true; // 本次冒泡发生了交换
+      }
+      j++;
+    }
+
+    // 若本次冒泡过程中无数据交换，说明已完全有序
+    if (!isSwap) return arr;
+  }
+  return arr;
+}
+
+console.log(bubbleSort([8, 2, 3, 3, 2, 6])); // [ 2, 2, 3, 3, 6, 8 ]
+```
