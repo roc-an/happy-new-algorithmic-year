@@ -1,5 +1,7 @@
 # 冒泡排序 Bubble Sort
 
+> 封面图来自 Pexels 上的 Karolina Grabowska 拍摄的图片
+
 ## （一）思路分析
 
 假设使用冒泡排序对一个有 `n` 个元素的数组进行升序排序：
