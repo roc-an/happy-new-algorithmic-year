@@ -31,3 +31,40 @@
 ![给扑克牌排序](https://user-images.githubusercontent.com/79783808/132353543-4909717d-50d3-4cbe-997c-9af0f878d864.jpeg)
 
 一开始发牌后，手中最左面的第 1 张牌是有序区间，然后从第 2 张牌开始，拿起来，依次和左面的牌比较，并插在合适的位置。重复该过程直到手中最右面的牌也插入好为止，整个牌就从左至右、从小到大排序完成了
+
+## （二）编码实现
+
+```js
+/**
+ * @description 插入排序，升序
+ * @param {array} arr 数字数组
+ */
+function insertionSort(arr) {
+  if (!Array.isArray(arr) || arr.length < 2) return arr;
+
+  const len = arr.length;
+  let i = 1; // 待插元素索引
+
+  // 外层循环：依次取待插入元素，直到所有元素都插入完成
+  while (i < len) {
+    const toInsert = arr[i]; // 待插元素
+    let j = i - 1; // 比较元素的索引，从待插元素前一个开始比较
+
+    // 内层循环：待插入元素与有序区间元素依次比较，有序区间元素移位
+    while(j >= 0) {
+      if (toInsert < arr[j]) {
+        // 待插元素更小，所比较的有序区间元素后移 1 位
+        arr[j+1] = arr[j];
+        j--;
+      } else {
+        break;
+      }
+    }
+    arr[j+1] = toInsert; // 插入元素
+    i++;
+  }
+  return arr;
+}
+
+console.log(insertionSort([3, 5, 4, 1, 2, 6])); // [ 1, 2, 3, 4, 5, 6 ]
+```
