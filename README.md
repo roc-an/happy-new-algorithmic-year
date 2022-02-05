@@ -23,3 +23,4 @@ O(1)，O(logn)，O(n)，O(nlogn)，O(n^2)，O(n^3)，O(2^n)，O(n!) **祝大家�
 ## 排忧解难
 
 * [冒泡排序 Bubble Sort](https://github.com/roc-an/happy-new-algorithmic-year/issues/1)
+* [插入排序 Insertion Sort](https://github.com/roc-an/happy-new-algorithmic-year/issues/2)
