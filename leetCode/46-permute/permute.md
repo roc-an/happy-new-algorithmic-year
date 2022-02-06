@@ -76,3 +76,100 @@
 等到所有的递归、回溯都完成后，也就得到最终的全排列结果数组了
 
 整体来看，这种思路是先遍历完树的 1 个分支，然后回溯，接着遍历完第 2 个分支，以此类推。这种遍历方式属于树的**深度优先遍历**
+
+## （三）编码实现
+
+```js
+/**
+ * @description 全排列
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
+function permute(nums) {
+  if (!Array.isArray(nums) || nums.length < 2) return [nums];
+
+  const len = nums.length;
+  const dist = []; // 结果数组
+  const path = []; // 遍历路径
+  const used = new Array(len); // 输入数组中，对应索引的数是否被选择
+
+  /**
+   * 深度优先遍历
+   * @param {number[]} nums 输入数组
+   * @param {number} depth 递归的层数，即当前已选择了几个数
+   * @param {number[]} path 从根节点到任意节点的路径
+   * @param {boolean[]} used 输入数组中，对应索引的数是否被选择
+   * @param {number[][]} dist 整个 permute 算法输出的全排列数组
+   */
+  const dps = (nums, depth, path, used, dist) => {
+    // 当递归层数达到输入数组的元素个数时，当前路径下所有数字已选择完毕，终止递归
+    if (depth === len) {
+      // 注意：整个算法 path 变量存的始终都是数组地址，所以在 push 结果数组时要进行拷贝
+      dist.push([...path]);
+      return;
+    }
+
+    // 循环输入数组，使用未选择的数，继续路径
+    for (let i = 0; i < len; i++) {
+      if (used[i]) {
+        continue;
+      }
+
+      used[i] = true; // 将数标记为已选择
+      path.push(nums[i]); // 将数记录至路径
+
+      // 继续递归选择
+      dps(nums, depth + 1, path, used, dist);
+
+      // 回溯：撤销之前的选择操作
+      used[i] = false;
+      path.pop();
+    }
+  }
+
+  dps(nums, 0, [], used, dist);
+  return dist;
+}
+
+console.log(permute([1, 2, 3]));
+// [
+//   [ 1, 2, 3 ],
+//   [ 1, 3, 2 ],
+//   [ 2, 1, 3 ],
+//   [ 2, 3, 1 ],
+//   [ 3, 1, 2 ],
+//   [ 3, 2, 1 ]
+// ]
+```
+
+### 编码实现分析
+
+递归与回溯的过程中，维护了几个重要的变量：
+
+* `depth`：递归的层数，即当前已选择了几个数。当它等于输入数组长度时，意味着一个排列诞生了，于是立刻将排列 `push` 进结果数组 `dist`，这作为了终止递归的条件
+* `path`：遍历路径数组。是一个栈，递归、回溯的过程中不断地将选择的数入栈，将取消选择的数出栈
+* `used`：记录每个数的是否被选择状态。索引与输入数组 `nums` 一致。有了它，就能知道接下来该枚举选择谁
+
+这些变量体现着当前正在进行的递归/回溯的状态，也叫**状态变量**
+
+另外值得注意的是“递归选择”和“回溯”的操作
+
+递归选择操作：
+
+```js
+used[i] = true; // 将数标记为已选择
+path.push(nums[i]); // 将数记录至路径
+
+// 继续递归选择
+dps(nums, depth + 1, path, used, dist);
+```
+
+回溯操作：
+
+```js
+// 回溯：撤销之前的选择操作
+used[i] = false;
+path.pop();
+```
+
+可以发现，**回溯操作与递归选择操作中，对状态变量的修改，正好是相反的**，说白了，递归时怎么操作的，回溯时就得“逆着来”
