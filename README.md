@@ -47,7 +47,7 @@ O(1)，O(logn)，O(n)，O(nlogn)，O(n^2)，O(n^3)，O(2^n)，O(n!) **祝大家�
 
 题号 | 题目 | 最佳解法 | 难度
 -- | -- | -- | --
-9 | 回文数 | 反转一半数字 | :star:
+9 | [回文数](https://github.com/roc-an/happy-new-algorithmic-year/blob/main/leetCode/9-isPalindrome/code/isPalindrome-nonstr.js) | 反转一半数字 | :star:
 
 ### 链表
 
