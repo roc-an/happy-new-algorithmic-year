@@ -20,7 +20,29 @@ O(1)，O(logn)，O(n)，O(nlogn)，O(n^2)，O(n^3)，O(2^n)，O(n!) **祝大家�
 
 作为一个前端，我也想来沾沾喜气。建立这个仓库来分享我对上面知识的理解，并记录工作中对它们的实践运用。每逢新年，想想年初立的 Flag 实现了没，总结一年的收获和感悟
 
-## 排忧解难
+## （一）新年渐进步步高
+
+### 排忧解难
 
 * [冒泡排序 Bubble Sort](https://github.com/roc-an/happy-new-algorithmic-year/issues/1)
 * [插入排序 Insertion Sort](https://github.com/roc-an/happy-new-algorithmic-year/issues/2)
+
+### 宏图大展
+
+### 路路畅通
+
+### 枝繁叶茂
+
+### 顺顺流流
+
+### 规划精彩
+
+### 表达喜悦
+
+## （二）JS 解 LeetCode 题（思路解析 + 代码实现）
+
+### 数值计算
+
+LeetCode 序号 | 题目 | 最佳解法 | 难度
+-- | -- | -- | --
+9 | 回文数 | 反转一半数字 | :star:
