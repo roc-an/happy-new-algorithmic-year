@@ -28,6 +28,7 @@ function permute(nums) {
     }
 
     // 循环输入数组，使用未选择的数，继续路径
+    // Tips：在递归函数中，通过循环产生分支
     for (let i = 0; i < len; i++) {
       if (used[i]) {
         continue;
