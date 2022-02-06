@@ -45,34 +45,34 @@ O(1)，O(logn)，O(n)，O(nlogn)，O(n^2)，O(n^3)，O(2^n)，O(n!) **祝大家�
 
 ### 数值计算
 
-LeetCode 序号 | 题目 | 最佳解法 | 难度
+题号 | 题目 | 最佳解法 | 难度
 -- | -- | -- | --
 9 | 回文数 | 反转一半数字 | :star:
 
 ### 链表
 
-LeetCode 序号 | 题目 | 最佳解法 | 难度
+题号 | 题目 | 最佳解法 | 难度
 -- | -- | -- | --
-206 | 反转单链表 | - | :star:
-234 | 回文链表 | 反转链表 + 快慢指针 | :star:
-2 | 两数相加 | - | :star: :star:
+206 | [反转单链表](https://github.com/roc-an/happy-new-algorithmic-year/blob/main/leetCode/206-reverseList/code/reverseList.js) | - | :star:
+234 | [回文链表](https://github.com/roc-an/happy-new-algorithmic-year/blob/main/leetCode/234-isPalindrome-linkedList/code/isPalindrome-linkedList.js) | 反转链表 + 快慢指针 | :star:
+2 | [两数相加](https://github.com/roc-an/happy-new-algorithmic-year/issues/4) | - | :star: :star:
 
 ### 散列表
 
-LeetCode 序号 | 题目 | 最佳解法 | 难度
+题号 | 题目 | 最佳解法 | 难度
 -- | -- | -- | --
-1 | 两数之和 | 散列表 | :star:
+1 | [两数之和](https://github.com/roc-an/happy-new-algorithmic-year/issues/5) | 散列表 | :star:
 
 ### 二分查找
 
-LeetCode 序号 | 题目 | 最佳解法 | 难度
+题号 | 题目 | 最佳解法 | 难度
 -- | -- | -- | --
-69 | 求非负整数的算术平方根 | 二分查找 | :star:
+69 | [求非负整数的算术平方根](https://github.com/roc-an/happy-new-algorithmic-year/blob/main/leetCode/69-sqrtx/code/sqrtx-binarySearch.js) | 二分查找 | :star:
 
 ### 综合题目
 
-LeetCode 序号 | 题目 | 最佳解法 | 难度
+题号 | 题目 | 最佳解法 | 难度
 -- | -- | -- | --
-414 | 第三大的数 | - | :star:
-3 | 无重复字符的最长子串 | 滑动窗口 | :star: :star:
-15 | 三数之和 | 排序 + 双指针 | :star: :star:
+414 | [第三大的数](https://github.com/roc-an/happy-new-algorithmic-year/blob/main/leetCode/414-thirdMax/code/thirdMax.js) | - | :star:
+3 | [无重复字符的最长子串](https://github.com/roc-an/happy-new-algorithmic-year/issues/3) | 滑动窗口 | :star: :star:
+15 | [三数之和](https://github.com/roc-an/happy-new-algorithmic-year/blob/main/leetCode/15-threeSum/code/threeSum.js) | 排序 + 双指针 | :star: :star:

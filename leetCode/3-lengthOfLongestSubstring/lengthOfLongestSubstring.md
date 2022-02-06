@@ -301,7 +301,7 @@ const s5 = ' '; // 期望得到 1
 
 我们前后用了 “青铜级 -> 钻石级 -> 王者级” 3 种方案对 “无重复字符的最长子串” 进行了解题。
 
-可以在[这里](https://github.com/roc-an/blog/tree/main/algorithm-topics/lengthOfLongestSubstring/code)找到 3 种方案的完整代码。
+可以在[这里](https://github.com/roc-an/happy-new-algorithmic-year/tree/main/leetCode/3-lengthOfLongestSubstring/code)找到 3 种方案的完整代码。
 
 核心的**解题意识**可以概括为两点：
 
