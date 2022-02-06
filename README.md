@@ -69,6 +69,12 @@ O(1)，O(logn)，O(n)，O(nlogn)，O(n^2)，O(n^3)，O(2^n)，O(n!) **祝大家�
 -- | -- | -- | --
 69 | [求非负整数的算术平方根](https://github.com/roc-an/happy-new-algorithmic-year/blob/main/leetCode/69-sqrtx/code/sqrtx-binarySearch.js) | 二分查找 | :star:
 
+### 树
+
+题号 | 题目 | 最佳解法 | 难度
+-- | -- | -- | --
+46 | [全排列](https://github.com/roc-an/happy-new-algorithmic-year/issues/6) | 递归、回溯、深度优先遍历 | :star: :star:
+
 ### 综合题目
 
 题号 | 题目 | 最佳解法 | 难度
